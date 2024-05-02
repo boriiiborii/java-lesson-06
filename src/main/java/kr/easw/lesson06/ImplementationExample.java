@@ -40,16 +40,32 @@ public class ImplementationExample {
         }
     }
 
+    final static class Cat implements Animal {
+        private void noow() {
+            System.out.println("nooooooooow!");
+        }
 
-    static class Cat {
-        private void meow() {
-            System.out.println("Meow!");
+        // 부모 클래스에서 오버라이딩(Overriding)된 클래스는 @Override 어노테이션을 통해 오버라이딩된 메서드임을 명시할 수 있습니다.
+        // 어노테이션은 컴파일러에게 특정한 정보를 전달하는 역할을 합니다. @Override의 경우, 해당 메서드가 오버라이딩된 메서드임을 명시합니다.
+        // 만약, 이 어노테이션이 상속 대상이 아닌 메서드에 사용된다면 컴파일러는 오류를 발생시킵니다.
+        @Override
+        public void speak() {
+            noow();
         }
     }
 
-    static class Horse {
-        private void neigh() {
-            System.out.println("Neigh!");
+    final static class Horse implements Animal {
+        private void hiiiiiiiing() {
+            System.out.println("hiiiiiiiiiiiiiiiiing!");
+        }
+
+        // 부모 클래스에서 오버라이딩(Overriding)된 클래스는 @Override 어노테이션을 통해 오버라이딩된 메서드임을 명시할 수 있습니다.
+        // 어노테이션은 컴파일러에게 특정한 정보를 전달하는 역할을 합니다. @Override의 경우, 해당 메서드가 오버라이딩된 메서드임을 명시합니다.
+        // 만약, 이 어노테이션이 상속 대상이 아닌 메서드에 사용된다면 컴파일러는 오류를 발생시킵니다.
+        @Override
+        public void speak() {
+            hiiiiiiiing();
         }
     }
+
 }

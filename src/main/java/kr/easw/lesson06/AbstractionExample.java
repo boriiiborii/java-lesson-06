@@ -45,12 +45,25 @@ public class AbstractionExample {
         }
     }
 
+    static class Bicycle extends Vehicle {
+        public Bicycle(String name) {
+            super(name);
+        }
 
-    static class Bicycle {
-
+        @Override
+        public void run() {
+            System.out.println("Bicycle is running!");
+        }
     }
 
-    static class Motorcycle {
+    static class Motorcycle extends Vehicle {
+        public Motorcycle(String name) {
+            super(name);
+        }
 
+        @Override
+        public void run() {
+            System.out.println("Motorcycle is running!");
+        }
     }
 }
